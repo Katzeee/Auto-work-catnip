@@ -77,7 +77,7 @@ class PDFDeal:
 
         
 
-    def AA(self):
+    def GetAllContent(self):
         empty = np.array(["" for i in range(len(self.file_paths_))])
         a = np.array([[file.split('\\')[-1].split('.')[0] for file in self.file_paths_], self.problem_overviews_, self.problem_overviews_translate_, empty, self.project_numbers_, self.part_numbers_, self.group_numbers_])
         return a.transpose()

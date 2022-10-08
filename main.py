@@ -14,6 +14,6 @@ excel = ExcelFill.ExcelFill(r'D:\Downloads\Compressed\2022-09-20 Aeko Task List.
 
 ## excel.FillTaskList(deal.AA())
 
-print(deal.AA())
+print(deal.GetAllContent())
 
 

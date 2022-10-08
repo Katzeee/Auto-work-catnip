@@ -1,5 +1,8 @@
 from enum import Enum
 import datetime
+import os
+
+from utils import GetCurrentTime
 
 class Logger:
     def __init__(self, log_file:str = ""):
@@ -26,6 +29,11 @@ class Logger:
     def Log_GREEN(self, log_content, is_to_stdout):
         self.Log(log_content, is_to_stdout, self.Color.GREEN)
 
+folder_path = os.getcwd()
+if not os.path.exists(folder_path + "\\Log"):
+    os.mkdir(folder_path + "\\Log")
+log_path = folder_path + "\\Log\\Log." + GetCurrentTime() + ".txt"
+print(log_path)
 Root_logger = Logger()
     
 
